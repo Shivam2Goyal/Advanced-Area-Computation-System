@@ -20,6 +20,7 @@ program calculates and displays the corresponding area.
 7. **Rectangular Arena**
 8. **Linear Curve**
 9. **Quadratic Curve**
+10. **Exponential Curve**
 
 ## How to Use:
 
