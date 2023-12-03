@@ -7,7 +7,7 @@ float area;
 
 float Exponential_Curve(){
     float a,b;
-    printf("Enter the parameters(a, b) of the exponnential curve of form aˆ(bx): ");
+    printf("Enter the parameters(a, b) of the exponnential curve of form a^(bx): ");
     scanf("%f %f",&a,&b);
     float x1;
     printf("Enter the lower value of x = x1: ");
@@ -26,7 +26,7 @@ float Exponential_Curve(){
     area=a1;
     printf("Area=%s%.2f%s",BOLD,area,RESET);
 }
-//-----------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------------------------------------------------------
 float Linear_Curve(){
     printf("The Linear function is of the form: y = mx + c");
     printf("\n%sEnter the Asked information to find the area under the line:%s \n",BOLD,RESET);
@@ -56,7 +56,7 @@ float Linear_Curve(){
         printf("%s%.2f%s",BOLD,area,RESET);
     }
 }
-//-----------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------------------------------------------------------
 float Quadratic_Curve(){
     printf("The quadratic function is of the form: ax^2 + bx + c = 0\n");
     float a,b,c,p,q;
@@ -76,7 +76,7 @@ float Quadratic_Curve(){
     area=a1;
     printf("Area=%s%.2f%s",BOLD,area,RESET);
 }
-//-----------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------------------------------------------------------
 float Rectanle(){
     printf("\n%sEnter the Dimensions of Rectangle:%s \n",BOLD,RESET);
     float b,l;
@@ -87,7 +87,7 @@ float Rectanle(){
     area=fabs(b)*fabs(l);
     printf("\nArea: %s%.2f%s",BOLD,area,RESET);
 }
-//-----------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------------------------------------------------------
 float Triangle(){
     printf("\n%sEnter the Dimensions of Truangle:%s \n",BOLD,RESET);
     float theta,s1,s2;
@@ -99,9 +99,9 @@ float Triangle(){
     printf("Enter the lenght of Side2: ");
     scanf("%f",&s2);
     area=(0.5)*fabs(s1)*fabs(s2)*fabs(sin(theta));
-    printf("\nArea: %s%f%smˆ2",BOLD,area,RESET);
+    printf("\nArea: %s%f%s",BOLD,area,RESET);
 }
-//-----------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------------------------------------------------------
 float Ellipse(){
     printf("\n%sEnter the Dimensions of Ellipse:%s \n",BOLD,RESET);
     float a,b;
@@ -110,9 +110,9 @@ float Ellipse(){
     printf("Enter the lenght of Minor axis: ");
     scanf("%f",&b);
     area = (3.14)*fabs(a/2)*fabs(b/2);
-    printf("\nArea: %s%.2f%smˆ2",BOLD,area,RESET);
+    printf("\nArea: %s%.2f%s",BOLD,area,RESET);
 }
-//-----------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------------------------------------------------------
 float Trapezium(){
     printf("\n%sEnter the Dimensions of Trapezium:%s \n",BOLD,RESET);
     float a,b,h;
@@ -123,27 +123,27 @@ float Trapezium(){
     printf("Enter the seperation between the parallel sides: ");
     scanf("%f",&h);
     area = ((fabs(a)+fabs(b))/2)*fabs(h);
-    printf("\nArea: %s%.2f%smˆ2",BOLD,area,RESET);
+    printf("\nArea: %s%.2f%s",BOLD,area,RESET);
 }
-//-----------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------------------------------------------------------
 float Circle(){
     float r;
     printf("\n%sEnter the Dimensions of the Circle:%s \n",BOLD,RESET);
     printf("Enter the Radius of the Circle: ");
     scanf("%f",&r);
     area=3.14159*fabs(r)*fabs(r);
-    printf("\nArea: %s%.2f%smˆ2",BOLD,area,RESET);
+    printf("\nArea: %s%.2f%s",BOLD,area,RESET);
 }
-//-----------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------------------------------------------------------
 float Regular_Hexagon(){     
    float a;
    printf("\n%sEnter the Dimensions of the regular hexagon:%s \n",BOLD,RESET);
    printf("Enter the Side length of Regualr Hexagon: ");
    scanf("%f",&a);
    area=1.5*1.732*fabs(a)*fabs(a);
-   printf("\nArea: %s%.2f%smˆ2",BOLD,area,RESET);
+   printf("\nArea: %s%.2f%s",BOLD,area,RESET);
 }
-//-----------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------------------------------------------------------
 float Rectangular_Arena(){
    float l,b,r;
    printf("\n%sEnter the Dimensions of the rectangular arena:%s \n",BOLD,RESET);
@@ -153,9 +153,9 @@ float Rectangular_Arena(){
    scanf("%f",&b);
    r=b/2;
    area=(3.14159*fabs(r)*fabs(r)) + (fabs(l)*fabs(b));
-   printf("\nArea: %s%.2f%smˆ2",BOLD,area,RESET);
+   printf("\nArea: %s%.2f%s",BOLD,area,RESET);
 }
-//-----------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------------------------------------------------------
 int main()
 {
     int n;
@@ -203,15 +203,19 @@ int main()
         else if(n==10){
             Exponential_Curve();
         }
-//-----------------------------------------------------------------------------------------
+        else{
+            printf("\t->Please enter the value between 1 to 10\n");
+            goto label;
+        }
+//---------------------------------------------------------------------------------------------------------------------------------------
         int opt;
-        printf("\nThe area is calculated in mˆ2.\nDo you wish to print area in other units?\nAnswer in Yes(1) or No(0)\n");
+        printf("\nThe area is calculated in m^2.\nDo you wish to print area in other units?\nAnswer in Yes(1) or No(0)\n");
         label1:
         scanf("%d",&opt);
         if(opt==1){
             int temp;
             printf("Please select the desired unit: \n");
-            printf("1. cmˆ2\n2. inˆ2\n");
+            printf("1. cm^2\n2. in^2\n");
             scanf("%d",&temp);
             if(temp==1){
             area=10000*area;
@@ -237,10 +241,11 @@ int main()
             else if(p==0){
             }
             else{
-                printf("Area converter shut down.");
+                printf("Area converter shutted down.");
             }
         }
-//-----------------------------------------------------------------------------------------
+        
+//---------------------------------------------------------------------------------------------------------------------------------------
         int t;
         printf("\nPress 1 to again calculate area, 0 to quit\n");
         scanf("%d",&t);
