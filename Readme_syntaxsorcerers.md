@@ -25,8 +25,8 @@ program calculates and displays the corresponding area.
 ## How to Use:
 
 1. Run the program.
-2. Choose a shape or curve by entering the corresponding number.
-3. Follow the on-screen prompts to input necessary parameters.
+2. Choose a shape or curve by entering the corresponding number between 1 and 10.
+3. Follow the on-screen prompts to input the necessary parameters.
 4. The program will calculate and display the area.
 5. Optionally, choose to convert the area to different units (cmˆ2 or inˆ2).
 
